@@ -1,3 +1,5 @@
+/* LoginPage.css */
+
 body {
     background: url('../Assets/LoginFormBackground.jpg') no-repeat;
     background-size: cover; 
@@ -93,7 +95,7 @@ body {
 .wrapper .register-link {
     font-size: 14.5px;
     text-align: center;
-    margin: 20px 0 15px;
+    margin-top: 20px;
 }
 
 .register-link p a {

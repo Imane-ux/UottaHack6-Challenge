@@ -2,11 +2,65 @@
     background-color: #f0f0f0; /* Example background color */
     padding: 20px; /* Example padding */
     border-radius: 10px; /* Example border radius */
-    width: 100vw; /* Take up the entire width of the viewport */
+    width: calc(100vw - 250px); /* Adjusted width to accommodate sidebar */
     height: 100vh; /* Take up the entire height of the viewport */
     display: flex; /* Use flexbox for positioning */
     flex-direction: column; /* Arrange children vertically */
     justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center the content horizontally */
+    margin-left: 250px; /* Align with the sidebar */
+    padding-top: 70px; /* Add padding to the top to create space below the navbar */
+  }  
+  
+  .message-display {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    max-width: 999999999px;
+  }
+  
+  
+  .message {
+    background-color: #e2e2e2; /* Background color of the message bubble */
+    padding: 10px; /* Padding inside the message bubble */
+    margin-bottom: 10px; /* Spacing between messages */
+    border-radius: 10px; /* Rounded corners for the message bubble */
+    max-width: 70%; /* Maximum width of the message bubble */
+    word-wrap: break-word; /* Allow long messages to wrap */
+  }
+  
+  .message.sent {
+    background-color: #007bff; /* Background color for messages sent by the user */
+    color: white; /* Text color for messages sent by the user */
+    align-self: flex-end; /* Align sent messages to the right */
+  }
+  
+  .message-input {
+    display: flex;
+    padding: 10px;
+  }
+  
+  .message-input-field {
+    flex: 1;
+    margin-right: 10px;
+    width: 70%; /* Adjusted width */
+    max-width: 1000px; /* Maximum width to avoid it becoming too long */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  
+  .send-button {
+    margin-right: -200px; /* Adjusted position */
+    padding: 8px 12px;
+    border: none;
+    background-color: #800000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .sender {
+    font-size: 0.8rem; /* Adjust the font size as needed */
   }
   

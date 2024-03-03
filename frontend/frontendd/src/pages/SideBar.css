@@ -1,0 +1,51 @@
+/* Sidebar.css */
+
+.custom-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px; /* Adjust width as needed */
+    background-color: #ffffff; /* Background color */
+    border-right: 1px solid #800000; /* Border color */
+    z-index: 1; /* Ensure it's above other content */
+    overflow-y: auto; /* Add scroll if content overflows vertically */
+  }
+  
+  .custom-sidebar #sidebar {
+    padding-top: 50px; /* Adjust for space for header or logo */
+  }
+  
+  .custom-sidebar .sidebar-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .custom-sidebar .list-group {
+    padding: 0;
+  }
+  
+  .custom-sidebar .list-group-item {
+    border: none;
+  }
+  
+  .custom-sidebar .list-group-item:hover {
+    background-color: #f8f9fa; /* Hover background color */
+  }
+
+  .custom-sidebar .dropdown-menu .dropdown-item {
+    padding-left: 30px; /* Adjust indentation as needed */
+}
+
+.custom-sidebar .list-group-item.bg-light {
+    background-color: #ffffff; /* Default background color */
+  }
+  
+  .custom-sidebar .list-group-item.bg-light:hover {
+    background-color: #e9ecef; /* Darker background color on hover */
+  }
+  
+  .custom-sidebar .collapse .list-group-item {
+    padding-left: 30px; /* Adjust the indentation as needed */
+  }

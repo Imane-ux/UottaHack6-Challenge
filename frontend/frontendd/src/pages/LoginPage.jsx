@@ -1,4 +1,3 @@
-// src/pages/LoginPage.jsx
 import './LoginPage.css';
 import { FaUser, FaLock } from "react-icons/fa";
 import React from 'react';
@@ -8,7 +7,7 @@ const LoginPage = () => {
   return (
     <div className='wrapper'>
       <form>
-        <h1>Login</h1>
+        <h1>uCollab Login</h1>
         <div className="input-box">
           <input type="text" placeholder='Username' required />
         </div>
@@ -21,10 +20,14 @@ const LoginPage = () => {
           <a href="#">Forgot password?</a>
         </div>
 
-        {/* Navigate to chat page when the login button is clicked */}
         <Link to="/chat">
           <button type='submit'>Login</button>
         </Link>
+
+        <div className="register-link">
+          <p>No account? <a href="#">Create one!</a></p>
+        </div>
+
       </form>
     </div>
   );
