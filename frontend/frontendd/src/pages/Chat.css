@@ -1,0 +1,12 @@
+.chat-container {
+    background-color: #f0f0f0; /* Example background color */
+    padding: 20px; /* Example padding */
+    border-radius: 10px; /* Example border radius */
+    width: 100vw; /* Take up the entire width of the viewport */
+    height: 100vh; /* Take up the entire height of the viewport */
+    display: flex; /* Use flexbox for positioning */
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+  }
+  
