@@ -2,49 +2,32 @@ import React, { useState, useRef } from 'react';
 import './Chat.css';
 import Sidebar from './SideBar';
 import { BsMicFill } from 'react-icons/bs'; // Import Bootstrap icons
-import{ db } from '../firebaseConfig';
-import { addDoc, collection, getDocs } from 'firebase/firestore';
-import { useEffect } from 'react';
 
 const Chat = () => {
-  const msgRef= useRef();
-  const ref= collection(db,"messages");
+  const msgRef = useRef();
 
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-
-  useEffect(() => {
-    // Set up a listener for real-time updates
-    const getMsgs= async () => {
-      const data= await getDocs(ref);
-      setMessages(data.docs.map((doc)=> ({...doc.data(), id: doc.id})));
-
-    };
-    getMsgs();
-    
-  }, [ref]);
+  const [uploadPopupVisible, setUploadPopupVisible] = useState(false); // State for managing upload popup visibility
 
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
-
   };
 
-  const sendMessage = async () => {
+  const sendMessage = () => {
     if (message.trim() !== '') {
-      console.log(msgRef.current.value);
-      let data= {
-        message:msgRef.current.value,
-        sender:"ok"
-      }
-      try{
-        await addDoc(ref, data);
-      }catch(e){
-        console.error("error, sending", e);
-    }
-      setMessage('');
+      const data = {
+        message: message.trim(),
+        sender: "imane" // Assume sender is "me" for sent messages
+      };
+      setMessages([...messages, data]); // Add the new message to the messages state
+      setMessage(''); // Clear the message input field
     }
   };
-  
+
+  const toggleUploadPopup = () => {
+    setUploadPopupVisible(!uploadPopupVisible);
+  };
 
   return (
     <div className="d-flex" id="wrapper">
@@ -53,8 +36,8 @@ const Chat = () => {
         <div className="chat-container">
           <div className="message-display">
             {messages.map((msg, index) => (
-              <div key={index} className={`message ${msg.sender === 'Maryam' ? 'sent' : 'received'}`}>
-                <div className="sender smaller">{msg.sender}</div>
+              <div key={index} className={`message ${msg.sender === 'me' ? 'sent' : 'received'}`}>
+                <div className="sender">{msg.sender}</div>
                 <div className="content">{msg.message}</div>
               </div>
             ))}
@@ -74,10 +57,10 @@ const Chat = () => {
               onChange={handleMessageChange}
               placeholder="Message #channel"
               className="message-input-field"
-              ref={msgRef} 
+              ref={msgRef}
             />
             <button onClick={sendMessage} className="send-button">Send</button>
-            <button className="send-button"><BsMicFill /></button> {/* Add microphone icon */}
+            <button onClick={toggleUploadPopup} className="send-button"><BsMicFill /></button> {/* Add microphone icon */}
           </div>
         </div>
       </div>

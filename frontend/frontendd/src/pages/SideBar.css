@@ -1,51 +1,106 @@
-/* Sidebar.css */
-
 .custom-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px; /* Adjust width as needed */
-    background-color: #ffffff; /* Background color */
-    border-right: 1px solid #800000; /* Border color */
-    z-index: 1; /* Ensure it's above other content */
-    overflow-y: auto; /* Add scroll if content overflows vertically */
-  }
-  
-  .custom-sidebar #sidebar {
-    padding-top: 50px; /* Adjust for space for header or logo */
-  }
-  
-  .custom-sidebar .sidebar-heading {
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 20px;
-  }
-  
-  .custom-sidebar .list-group {
-    padding: 0;
-  }
-  
-  .custom-sidebar .list-group-item {
-    border: none;
-  }
-  
-  .custom-sidebar .list-group-item:hover {
-    background-color: #f8f9fa; /* Hover background color */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px; /* Adjust width as needed */
+  background-color: #ffffff; /* Background color */
+  border-right: 1px solid #800000; /* Border color */
+  z-index: 1; /* Ensure it's above other content */
+  overflow-y: auto; /* Add scroll if content overflows vertically */
+}
 
-  .custom-sidebar .dropdown-menu .dropdown-item {
-    padding-left: 30px; /* Adjust indentation as needed */
+.custom-sidebar #sidebar {
+  padding-top: 50px; /* Adjust for space for header or logo */
+}
+
+.custom-sidebar .sidebar-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.custom-sidebar .list-group {
+  padding: 0;
+}
+
+.custom-sidebar .list-group-item {
+  border: none;
+}
+
+.custom-sidebar .list-group-item:hover {
+  background-color: #f8f9fa; /* Hover background color */
+}
+
+.custom-sidebar .dropdown-menu .dropdown-item {
+  padding-left: 30px; /* Adjust indentation as needed */
 }
 
 .custom-sidebar .list-group-item.bg-light {
-    background-color: #ffffff; /* Default background color */
-  }
-  
-  .custom-sidebar .list-group-item.bg-light:hover {
-    background-color: #e9ecef; /* Darker background color on hover */
-  }
-  
-  .custom-sidebar .collapse .list-group-item {
-    padding-left: 30px; /* Adjust the indentation as needed */
-  }
+  background-color: #ffffff; /* Default background color */
+}
+
+.custom-sidebar .list-group-item.bg-light:hover {
+  background-color: #e9ecef; /* Darker background color on hover */
+}
+
+.custom-sidebar .collapse .list-group-item {
+  padding-left: 30px; /* Adjust the indentation as needed */
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-top: 1px solid #ccc; /* Add border to separate profile section */
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Make the profile picture circular */
+  margin-bottom: 10px;
+}
+
+.profile-details {
+  font-size: 14px; /* Adjust font size */
+}
+
+/* Sidebar.css */
+
+.custom-sidebar {
+  position: fixed;
+  bottom: 0; /* Move sidebar to the bottom */
+  left: 0;
+  height: auto; /* Adjust height */
+  width: 250px; /* Adjust width as needed */
+  background-color: #ffffff; /* Background color */
+  border-right: 1px solid #800000; /* Border color */
+  z-index: 1; /* Ensure it's above other content */
+  overflow-y: auto; /* Add scroll if content overflows vertically */
+}
+
+.custom-sidebar #sidebar {
+  padding-bottom: 50px; /* Adjust for space at the bottom */
+}
+
+.custom-sidebar .profile-section {
+  position: absolute; /* Position the profile section */
+  bottom: 0; /* Align it to the bottom */
+  left: 0; /* Align it to the left */
+  width: 100%; /* Make it full width */
+  padding: 20px;
+  border-top: 1px solid #ccc; /* Add border to separate profile section */
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  justify-content: center;
+  padding: 20px;
+  border-top: 1px solid #ccc; /* Add border to separate profile section */
+}
