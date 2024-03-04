@@ -18,3 +18,7 @@ uCollab provides a platform for students to collaborate, share resources, and co
 ## Recognition
 
 uCollab was honored to be selected as the winner of the University of Ottawa: Office of The President Challenge during uOttaHack6. We're grateful for this recognition and the opportunity to showcase our project.
+
+## Images
+![uCollabLogin](https://github.com/mbelk059/UottaHack6-Challenge/assets/114425943/ae2a71db-85c5-45d9-9831-f6bdc83bab45)
+![chatpage2](https://github.com/mbelk059/UottaHack6-Challenge/assets/114425943/0bdc6119-ed62-4ccf-abc0-498512a011f9)
