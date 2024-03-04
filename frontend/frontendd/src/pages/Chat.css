@@ -1,66 +1,104 @@
 .chat-container {
-    background-color: #f0f0f0; /* Example background color */
-    padding: 20px; /* Example padding */
-    border-radius: 10px; /* Example border radius */
-    width: calc(100vw - 250px); /* Adjusted width to accommodate sidebar */
-    height: 100vh; /* Take up the entire height of the viewport */
-    display: flex; /* Use flexbox for positioning */
-    flex-direction: column; /* Arrange children vertically */
-    justify-content: center; /* Center the content vertically */
-    margin-left: 250px; /* Align with the sidebar */
-    padding-top: 70px; /* Add padding to the top to create space below the navbar */
-  }  
-  
-  .message-display {
-    flex: 1;
-    overflow-y: auto;
-    padding: 10px;
-    max-width: 999999999px;
-  }
-  
-  
-  .message {
-    background-color: #e2e2e2; /* Background color of the message bubble */
-    padding: 10px; /* Padding inside the message bubble */
-    margin-bottom: 10px; /* Spacing between messages */
-    border-radius: 10px; /* Rounded corners for the message bubble */
-    max-width: 70%; /* Maximum width of the message bubble */
-    word-wrap: break-word; /* Allow long messages to wrap */
-  }
-  
-  .message.sent {
-    background-color: #007bff; /* Background color for messages sent by the user */
-    color: white; /* Text color for messages sent by the user */
-    align-self: flex-end; /* Align sent messages to the right */
-  }
-  
-  .message-input {
-    display: flex;
-    padding: 10px;
-  }
-  
-  .message-input-field {
-    flex: 1;
-    margin-right: 10px;
-    width: 70%; /* Adjusted width */
-    max-width: 1000px; /* Maximum width to avoid it becoming too long */
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  
-  .send-button {
-    margin-right: -200px; /* Adjusted position */
-    padding: 8px 12px;
-    border: none;
-    background-color: #800000;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .sender {
-    font-size: 0.8rem; /* Adjust the font size as needed */
-  }
-  
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(100vw - 250px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 250px;
+  padding-top: 70px;
+}
+
+.message-display {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  max-width: 999999999px;
+}
+
+.message {
+  background-color: #e2e2e2;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message.sent {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+
+.message-input {
+  display: flex;
+  padding: 10px;
+}
+
+.message-input-field {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  max-width: 95%;
+}
+
+.send-button {
+  padding: 8px 12px;
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.sender {
+  font-size: 0.8rem;
+}
+
+.message-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.add-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.add-button {
+  padding: 8px;
+  background-color: #800000;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Set border-radius to 50% for perfect roundness */
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+  width: 30px; 
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-button:hover {
+  background-color: #b30000;
+}
+
+.upload-popup {
+  position: absolute;
+  top: -45px; /* Adjust as needed */
+  left: 160%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px 20px; /* Add padding */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
