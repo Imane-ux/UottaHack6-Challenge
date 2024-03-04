@@ -17,4 +17,4 @@ uCollab provides a platform for students to collaborate, share resources, and co
 
 ## Recognition
 
-uCollab was honored to be selected as the winner of the University of Ottawa: Office of The President Challenge during uOttaHack6. We're grateful for this recognition and remain committed to improving collaboration and communication for University of Ottawa students.
+uCollab was honored to be selected as the winner of the University of Ottawa: Office of The President Challenge during uOttaHack6. We're grateful for this recognition and the opportunity to showcase our project.
