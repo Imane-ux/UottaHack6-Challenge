@@ -13,7 +13,6 @@ uCollab provides a platform for students to collaborate, share resources, and co
 - User-friendly interface: Intuitive design for easy navigation and interaction.
 - File sharing: Upload and share files, documents, and multimedia seamlessly.
 - Study rooms: Organize and join study sessions with peers in dedicated virtual rooms.
-- Mobile responsiveness: Access uCollab on any device for on-the-go communication.
 
 ## Recognition
 
